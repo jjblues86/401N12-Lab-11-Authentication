@@ -33,6 +33,7 @@ module.exports = (req, res, next) => {
 
     function _authenticate(user) {
         if ( user ) {
+            // what should go in here to authenticate user?
             next();
         }
         else {

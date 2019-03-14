@@ -31,6 +31,7 @@ describe('Auth Router', () => {
                 return mockRequest.post('/signup')
                     .send(users[userType])
                     .then(results => {
+                        console.log(results.body)
                         var token = jwt.verify(results.text, process.env.SECRET || 'changeit');
                         id = token.id;
                         encodedToken = results.text;
