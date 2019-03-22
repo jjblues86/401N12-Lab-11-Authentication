@@ -31,7 +31,7 @@ describe('Auth Router', () => {
                 return mockRequest.post('/signup')
                     .send(users[userType])
                     .then(results => {
-                        console.log(results.body)
+                        console.log(results.text)
                         var token = jwt.verify(results.text, process.env.SECRET || 'changeit');
                         id = token.id;
                         encodedToken = results.text;
@@ -44,7 +44,7 @@ describe('Auth Router', () => {
                 return mockRequest.post('/signin')
                     .auth(users[userType].username, users[userType].password)
                     .then(results => {
-                        var token = jwt.verify(results.text, process.env.SECRET || 'changeit');
+                        var token = jwt.verify(encodedToken, process.env.SECRET || 'changeit');
                         expect(token.id).toEqual(id);
                         expect(token.capabilities).toBeDefined();
                     });
