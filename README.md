@@ -2,11 +2,12 @@
 ![CF](http://i.imgur.com/7v5ASc8.png) LAB
 =================================================
 
-### Author: Jerome Joof
+### Author: Jerome Joof & Skyler Burger
 
 ### Links and Resources
 * [repo](https://github.com/jjblues86/401N12-Lab-11-Authentication)
 * [![Build Status](https://www.travis-ci.com/jjblues86/401N12-Lab-11-Authentication.svg?branch=master)](https://www.travis-ci.com/jjblues86/401N12-Lab-11-Authentication)
+* [Heroku](https://lab-11-authentication-jj.herokuapp.com/)
 
 
 
